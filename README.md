@@ -1,9 +1,11 @@
-# Zipline: Build a Pomodoro Clock
+# Zipline: Build a Calculator
 ===
 
 http://codepen.io/t73biz/pen/gaZZgJ
 
-Objective: Build a CodePen.io app that successfully reverse-engineers this: http://codepen.io/GeoffStorbeck/full/RPbGxZ/.
+Based off this image: http://i.ebayimg.com/00/s/OTkyWDEwMzA=/z/tIgAAOSwVupTpjdv/$_35.JPG
+
+Objective: Build a CodePen.io app that successfully reverse-engineers this: http://codepen.io/GeoffStorbeck/full/zxgaqw.
 
 Rule #1: Don't look at the example project's code on CodePen. Figure it out for yourself.
 
@@ -11,8 +13,10 @@ Rule #2: You may use whichever libraries or APIs you need.
 
 Rule #3: Reverse engineer the example project's functionality, and also feel free to personalize it.
 
-User Story: As a user, I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.
+Here are the user stories you must enable, and optional bonus user stories:
 
-Bonus User Story: As a user, I can reset the clock for my next pomodoro.
+User Story: As a user, I can add, subtract, multiply and divide two numbers.
 
-Bonus User Story: As a user, I can customize the length of each pomodoro.
+Bonus User Story: I can clear the input field with a clear button.
+
+Bonus User Story: I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.
