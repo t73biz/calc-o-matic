@@ -3,7 +3,7 @@
 
 http://codepen.io/t73biz/pen/gaZZgJ
 
-Based off this image: http://i.ebayimg.com/00/s/OTkyWDEwMzA=/z/tIgAAOSwVupTpjdv/$_35.JPG
+Based off this image: images/calc.jpg
 
 Objective: Build a CodePen.io app that successfully reverse-engineers this: http://codepen.io/GeoffStorbeck/full/zxgaqw.
 

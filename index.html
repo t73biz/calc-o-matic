@@ -7,94 +7,62 @@
 	<link rel="stylesheet" href="css/base.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" id="calculator" data-ng-controller="CalculatorController">
 		<div class="row">
-			<div class="title">
-				<span class="title--main-title">T73 Biz</span>
-				<span class="title--sub-title">Calc-O-Matic</span>
+			<div class="col-xs-8"></div>
+			<h1 id="title" class="col-xs-3">
+				<span id="main-title">T73 Biz</span>
+				<span id="sub-title">Calc-O-Matic</span>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10" id="answer">
+				<span id="display" data-ng-answer={{ answer }}>{{ answer }}</span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12">
-				Answer.
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-1">
-				On/Off
-			</div>
+			<div class="col-xs-2 column"></div>
 			<!-- Left Column Start -->
-			<div class="col-xs-7">
-				<div class="row">
-					<div class="col-xs-4">
-						7
-					</div>
-					<div class="col-xs-4">
-						8
-					</div>
-					<div class="col-xs-4">
-						9
-					</div>
+			<div class="col-xs-4 column">
+				<div class="row keypad">
+					<button class="btn btn-default" data-ng-click="addOperand(7)">7</button>
+					<button class="btn btn-default" data-ng-click="addOperand(8)">8</button>
+					<button class="btn btn-default" data-ng-click="addOperand(9)">9</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-4">
-						4
-					</div>
-					<div class="col-xs-4">
-						5
-					</div>
-					<div class="col-xs-4">
-						6
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default" data-ng-click="addOperand(4)">4</button>
+					<button class="btn btn-default" data-ng-click="addOperand(5)">5</button>
+					<button class="btn btn-default" data-ng-click="addOperand(6)">6</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-4">
-						1
-					</div>
-					<div class="col-xs-4">
-						2
-					</div>
-					<div class="col-xs-4">
-						3
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default" data-ng-click="addOperand(1)">1</button>
+					<button class="btn btn-default" data-ng-click="addOperand(2)">2</button>
+					<button class="btn btn-default" data-ng-click="addOperand(3)">3</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-5">
-						0
-					</div>
-					<div class="col-xs-5 col-md-push-2">
-						.
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default" data-ng-click="addOperand(0)">0</button>
+					<button class="btn btn-default"  data-ng-click="addOperand('.')">.</button>
 				</div>
 			</div>
 			<!-- Left Column End -->
+			<div class="col-xs-1"></div>
 			<!-- Right Column Start -->
-			<div class="col-xs-4">
-				<div class="row">
-					<div class="col-xs-6">
-						C
-					</div>
-					<div class="col-xs-6">
-						CE
-					</div>
+			<div class="col-xs-3 column">
+				<div class="row keypad">
+					<button class="btn btn-default">C</button>
+					<button class="btn btn-default">CE</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-10 col-md-push-1">
-						- =
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default">-</button>
+					<button class="btn btn-default">+</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-6">
-						x
-					</div>
-					<div class="col-xs-6">
-						&div;
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default">x</button>
+					<button class="btn btn-default">&div;</button>
 				</div>
-				<div class="row">
-					<div class="col-xs-10 col-md-push-1">
-						+ =
-					</div>
+				<div class="row keypad">
+					<button class="btn btn-default">=</button>
 				</div>
 			</div>
 			<!-- Right Column End -->
