@@ -18,7 +18,8 @@
 		<div class="row">
 			<div class="col-xs-1"></div>
 			<div class="col-xs-10" id="answer">
-				<span id="display" data-ng-answer={{ answer }}>{{ answer }}</span>
+				<span id="first">&nbsp;</span>
+				<span>{{ display }}</span>
 			</div>
 		</div>
 		<div class="row">
@@ -26,23 +27,23 @@
 			<!-- Left Column Start -->
 			<div class="col-xs-4 column">
 				<div class="row keypad">
-					<button class="btn btn-default" data-ng-click="addOperand(7)">7</button>
-					<button class="btn btn-default" data-ng-click="addOperand(8)">8</button>
-					<button class="btn btn-default" data-ng-click="addOperand(9)">9</button>
+					<button class="btn btn-default" data-ng-click="addDigit(7)">7</button>
+					<button class="btn btn-default" data-ng-click="addDigit(8)">8</button>
+					<button class="btn btn-default" data-ng-click="addDigit(9)">9</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default" data-ng-click="addOperand(4)">4</button>
-					<button class="btn btn-default" data-ng-click="addOperand(5)">5</button>
-					<button class="btn btn-default" data-ng-click="addOperand(6)">6</button>
+					<button class="btn btn-default" data-ng-click="addDigit(4)">4</button>
+					<button class="btn btn-default" data-ng-click="addDigit(5)">5</button>
+					<button class="btn btn-default" data-ng-click="addDigit(6)">6</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default" data-ng-click="addOperand(1)">1</button>
-					<button class="btn btn-default" data-ng-click="addOperand(2)">2</button>
-					<button class="btn btn-default" data-ng-click="addOperand(3)">3</button>
+					<button class="btn btn-default" data-ng-click="addDigit(1)">1</button>
+					<button class="btn btn-default" data-ng-click="addDigit(2)">2</button>
+					<button class="btn btn-default" data-ng-click="addDigit(3)">3</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default" data-ng-click="addOperand(0)">0</button>
-					<button class="btn btn-default"  data-ng-click="addOperand('.')">.</button>
+					<button class="btn btn-default" data-ng-click="addDigit(0)">0</button>
+					<button class="btn btn-default" data-ng-click="setDecimal()">.</button>
 				</div>
 			</div>
 			<!-- Left Column End -->
@@ -50,27 +51,25 @@
 			<!-- Right Column Start -->
 			<div class="col-xs-3 column">
 				<div class="row keypad">
-					<button class="btn btn-default">C</button>
-					<button class="btn btn-default">CE</button>
+					<button class="btn btn-default" data-ng-click="clearDisplay()">C</button>
+					<button class="btn btn-default" data-ng-click="clearEverything()">CE</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default">-</button>
-					<button class="btn btn-default">+</button>
+					<button class="btn btn-default" data-ng-click="addOperator('+')">+</button>
+					<button class="btn btn-default" data-ng-click="addOperator('-')">-</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default">x</button>
-					<button class="btn btn-default">&div;</button>
+					<button class="btn btn-default" data-ng-click="addOperator('*')">x</button>
+					<button class="btn btn-default" data-ng-click="addOperator('/')">&div;</button>
 				</div>
 				<div class="row keypad">
-					<button class="btn btn-default">=</button>
+					<button class="btn btn-default" data-ng-click="evalEquation()">=</button>
 				</div>
 			</div>
 			<!-- Right Column End -->
 		</div>
 	</div>
 	<script src="js/angular.min.js" charset="utf-8"></script>
-	<script src="js/jquery.min.js" charset="utf-8"></script>
-	<script src="js/bootstrap.min.js" charset="utf-8"></script>
 	<script src="js/calculator.js" charset="utf-8"></script>
 	<script src="http://localhost:35729/livereload.js"></script>
 </body>

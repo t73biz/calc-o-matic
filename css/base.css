@@ -11,8 +11,6 @@ html, body {
 	margin: .25em;
 }
 
-.btn-default:active,
-.btn-default:active:hover,
 .btn-default:active:focus,
 .btn-default:focus,
 .btn-default:hover,
@@ -21,6 +19,12 @@ html, body {
 	background-color: #111;
 	border: .15em ridge #333;
 	outline: none;
+}
+
+.btn-default:active,
+.btn-default:active:hover {
+	background-color: #222;
+	border: .15em ridge #444;
 }
 
  .keypad {
@@ -32,8 +36,18 @@ html, body {
 	border: 1em solid #222;
 	border-radius: 1em;
 	color: #3f3;
+	display: flex;
 	font-family: monospace;
 	margin-bottom: 1em;
+}
+
+#answer span {
+	flex-grow: 1;
+	justify-content: flex-end;
+}
+
+#answer #first {
+	flex-grow: 10;
 }
 
 #calculator {
@@ -51,7 +65,7 @@ html, body {
 }
 
 #title {
-	font-size: .8em;
+	font-size: .75em;
 	display: flex;
 }
 
@@ -93,7 +107,7 @@ html, body {
 
 
 	#answer {
-		font-size: 2.5em;
+		font-size: 2em;
 		letter-spacing: .5em;
 	}
 
@@ -118,7 +132,7 @@ html, body {
 		padding: 0 15px;
 	}
 	#answer {
-		font-size: 2em;
+		font-size: 1.75em;
 		letter-spacing: .75em;
 	}
 	#calculator {
@@ -132,10 +146,10 @@ html, body {
 
 @media (min-width: 1200px) {
 	html, body {
-		font-size: 1em;
+		font-size: .95em;
 	}
 	#answer {
-		font-size: 3em;
+		font-size: 2.75em;
 		letter-spacing: .5em;
 	}
 }
